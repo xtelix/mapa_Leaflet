@@ -23,7 +23,7 @@ export class LeafletPage {
   }
 
   mapa: any;
-
+  marker: any;
   
 
   ngOnInit(): void {
@@ -32,12 +32,23 @@ export class LeafletPage {
 
 
   drawMap(): void {
-    
+
     this.mapa = Leaflet.map('map').setView([42.3508822,-7.9021054],13);
+
+    //this.marker.bindPopup("<b>Hola, aqui estoy!</b>");
+
     Leaflet.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
       attribution: 'Mapa Leaflet',
       maxZoom: 18
     }).addTo(this.mapa);
+
+     //localiza al
+     //this.marker = this.mapa.locate({setView: true, watch: true, maxZoom: 16});
+     //Marca una coordenada especifica 
+     //Leaflet.marker([42.3508822,-7.9021054]).addTo(this.mapa);
+
+     
+    this.mapa.locate({setView: true, maxZoom: 18});
 
     function onLocationError(e) {
       alert(e.message);
@@ -45,4 +56,5 @@ export class LeafletPage {
 
     this.mapa.on('locationerror', onLocationError);
   }
+  
 }
