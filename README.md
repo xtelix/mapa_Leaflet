@@ -1,7 +1,8 @@
 # mapa_Leaflet
 
 Mapa con leaflet 
-todo lo referente al mapa se encuentra en la pagina src/pages/leaflet
+
+Todo lo referente al mapa se encuentra en la pagina src/pages/leaflet
 
 Documentacion de leaflet:
 https://leafletjs.com/reference-1.3.4.html#map-example
