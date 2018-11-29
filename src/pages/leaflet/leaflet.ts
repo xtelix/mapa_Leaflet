@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import * as Leaflet from 'leaflet';
+import { Geolocation } from '@ionic-native/geolocation';
+
 //import "leaflet";
 /**
  * Generated class for the LeafletPage page.
@@ -22,15 +24,18 @@ export class LeafletPage {
 
   mapa: any;
 
+  
+
   ngOnInit(): void {
     this.drawMap();
   }
 
+
   drawMap(): void {
     
-    this.mapa = Leaflet.map('map').setView([40.4637,3.7492],13);
+    this.mapa = Leaflet.map('map').setView([42.3508822,-7.9021054],13);
     Leaflet.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-      attribution: 'AppTuto',
+      attribution: 'Mapa Leaflet',
       maxZoom: 18
     }).addTo(this.mapa);
 
