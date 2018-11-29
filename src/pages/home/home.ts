@@ -1,5 +1,6 @@
+import { LeafletPage } from './../leaflet/leaflet';
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavPush } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
@@ -11,4 +12,7 @@ export class HomePage {
 
   }
 
+  irLeaftlet(){
+    this.navCtrl.push(LeafletPage);
+  }
 }
