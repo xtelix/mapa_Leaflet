@@ -29,6 +29,11 @@ export class LeafletPage {
     this.drawMap();
   }
 
+  loadMap(){
+    this.mapa.remove();
+    this.drawMap();
+  }
+
   drawMap(): void {
 
     //inicializa un mapa indicando un punto y un zoom de 13 
@@ -58,10 +63,7 @@ export class LeafletPage {
                 this.mapa.addLayer(markerGroup);
                 }).on('locationerror', (err) => {
                   alert(err.message);
-              })
-
-
-    
+              })  
   }
   
 }
