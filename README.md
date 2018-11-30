@@ -1,6 +1,6 @@
 # mapa_Leaflet
 
-Mapa con leaflet 
+<b>Mapa con leaflet</b> 
 
 En src/pages/leaflet se encuentra lo referente al mapa 
 
